@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DanCarrillo93/gift-a-cate/issues"
   },
-  "homepage": "https://github.com/DanCarrillo93/gift-a-cate#readme"
+  "homepage": "https://github.com/DanCarrillo93/gift-a-cate#readme",
+  "dependencies": {
+    "eslint": "^7.25.0"
+  }
 }
