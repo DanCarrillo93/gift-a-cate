@@ -25,13 +25,35 @@ Items.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        link: {
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        category:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        link_1: {
             type: DataTypes.STRING,
             allowNull: true,
             validate: {
                 isUrl: true
             }
-        },      
+        },
+        link_2: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                isUrl: true
+            }
+        },
+        link_3: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                isUrl: true
+            }
+        },     
     },
     {
         sequelize,
