@@ -1,0 +1,97 @@
+:root {
+  --oxblue: #001b2e;
+  --charcoal: #294c60;
+  --cadetblue: #adb6c4;
+  --papaya: #ffefd3;
+  --peach: #ffc49b;
+}
+
+h1 {
+  display: inline;
+  font-family: "Courgette", cursive;
+  border: 5px solid var(--charcoal);
+  border-radius: 100px 20px 100px 20px;
+  background-color: var(--papaya);
+  font-size: 50px;
+  color: var(--charcoal);
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--charcoal);
+}
+
+h2,
+h4,
+h5 {
+  font-family: "Courgette", cursive;
+}
+
+p,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+h4 {
+  font-size: 30px;
+  border-bottom: 5px solid var(--oxblue);
+}
+
+.nav-btn {
+  border: 3px solid var(--charcoal);
+  border-radius: 10px;
+  background-color: var(--papaya);
+  padding: 0;
+  margin: 0 10px 0 10px;
+}
+
+.card-btn {
+  border: 3px solid var(--charcoal);
+  border-radius: 10px;
+  background-color: var(--papaya);
+  padding: 0;
+  margin: 0 10px 0 10px;
+}
+
+.btn-text,
+.card-btn-text {
+  color: var(--charcoal);
+  font-family: "Raleway", sans-serif;
+}
+
+.card-btn-text {
+  padding: 8px 16px;
+}
+
+.jumbotron {
+  background-color: var(--cadetblue);
+  margin-bottom: 16px;
+  padding: 32px 0px;
+}
+
+.nav-btn:hover {
+  background-color: var(--oxblue);
+  border: 3px solid var(--oxblue);
+}
+
+.nav-btn:hover .btn-text {
+  color: var(--peach);
+}
+
+.main-card {
+  margin: 10px 0px;
+  border: 10px solid var(--peach);
+  background-color: var(--cadetblue);
+}
+
+.icon {
+  margin-bottom: 10px;
+}
+
+.shop-link {
+  color: var(--charcoal);
+  font-family: "Raleway", sans-serif;
+}
