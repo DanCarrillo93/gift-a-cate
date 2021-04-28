@@ -14,12 +14,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^7.25.0"
+    "bcrypt": "^5.0.1",
+    "eslint": "^7.25.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
-    "prettier": "^2.1.2"
+    "prettier": "^2.2.1"
   },
   "bugs": {
     "url": "https://github.com/DanCarrillo93/gift-a-cate/issues"
