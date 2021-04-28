@@ -1,0 +1,33 @@
+[
+    {
+        "user_id": "1",
+        "item_name": "Nintendo Switch",
+        "description": "I want a nintendo.",
+        "category": "games",
+        "link_1": "www.nintendo.com",
+        "link_2": "www.amazon.com"   
+    },
+    {
+        "user_id": "2",
+        "item_name": "Blender",
+        "description": "I want to blend things",
+        "category": "appliances",
+        "link_1": "www.macys.com",
+        "link_2": "www.amazon.com"   
+    },
+    {
+        "user_id": "3",
+        "item_name": "Couch",
+        "description": "I want to sit all day and do nothing.",
+        "category": "furniture",
+        "link_1": "www.amazon.com",
+        "link_2": "www.craigslist.com"   
+    },
+    {
+        "user_id": "1",
+        "item_name": "Computer",
+        "description": "I want to code a lot, jk, I want to play video games.",
+        "category": "electronics",
+        "link_1": "www.bestbuy.com"  
+    }
+]
