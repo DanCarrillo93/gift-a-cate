@@ -1,0 +1,10 @@
+[
+    {
+        "lister": "1",
+        "follower": "2"
+    },
+    {        
+        "lister": "2",
+        "follower": "1"
+    }
+]
