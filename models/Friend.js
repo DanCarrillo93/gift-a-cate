@@ -6,7 +6,7 @@ class Friend extends Model {}
 // create fields/columns for Trip model
 Friend.init(
   {
-    friend_1: {
+    lister: {
         type: DataTypes.INTEGER,
         references: {
           model: 'User',
@@ -14,7 +14,7 @@ Friend.init(
           unique: false
         }
      },
-      friend_2: {
+    follower: {
         type: DataTypes.INTEGER,
         references: {
           model: 'User',
