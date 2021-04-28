@@ -37,6 +37,10 @@ User.init(
         len: [8],
       },
     },
+    friendcode: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {
