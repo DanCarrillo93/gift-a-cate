@@ -18,7 +18,8 @@ router.get("/", async (req, res) => {
         raw: true,
       });
     }
-    res.render("home", {
+    res.render("dashboard", {
+      // res.render("home", {
       title: "Home Page",
       isLoggedIn: req.session.isLoggedIn,
       user,
