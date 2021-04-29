@@ -1,12 +1,29 @@
-<h1>Signup</h1>
-<form class="signup-form">
-  <label for="username">Username</label><br>
-  <input type="text" name="username" id="username"><br>
-  <label for="password">Password</label><br>
-  <input type="password" name="password" id="password"><br>
-  <label for="confirm-password">Confirm Password</label><br>
-  <input type="password" name="confirm-password" id="confirm-password"><br>
-  <button class="btn" type="submit">Submit</button>
-</form>
-<p>Already have an account? <a href="/login">Login Here</a></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card border-dark p-3">
+        <h2>Sign Up</h2>
+
+        <form class="form" id="signup-form">
+          <div class="form-group">
+            <label for="login-user">Username</label>
+            <input type="text" class="form-control" id="signup-user" placeholder="Enter username">
+          </div>
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="signup-password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-dark">Sign Up</button>
+          <br>
+          <a href="/login">Already have an account? Log in instead</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="/js/signup.js"></script>

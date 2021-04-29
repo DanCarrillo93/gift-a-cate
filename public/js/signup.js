@@ -2,25 +2,19 @@
 const handleSignupSubmit = async (event) => {
   event.preventDefault();
   try {
-    const username = document.querySelector("#username").value.trim();
-    const password = document.querySelector("#password").value.trim();
-    const confirmPassword = document
-      .querySelector("#confirm-password")
-      .value.trim();
+    const username = document.querySelector("#signup-user").value.trim();
+    const email = document.querySelector("#signup-email").value.trim();
+    const password = document.querySelector("#signup-password").value.trim();
+    const friendcode = Math.floor(Math.random() * 10000000);
 
-    if (!username || !password) {
-      alert("You must provide a username and password.");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      alert("Passwords to not match.");
+    if (!username || !password || !email) {
+      alert("You must provide all inputs.");
       return;
     }
 
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password, email, friendcode }),
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
@@ -39,5 +33,5 @@ const handleSignupSubmit = async (event) => {
 };
 
 document
-  .querySelector(".signup-form")
+  .querySelector("#signup-form")
   .addEventListener("submit", handleSignupSubmit);

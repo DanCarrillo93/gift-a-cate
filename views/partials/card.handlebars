@@ -1,60 +1,72 @@
-<div class="row">
-    <div class="col-12 col-lg-6 d-flex">
-        <div class="main-card flex-grow-1">
-            <div class="row">
-                <div class="col-12 position-relative">
-                    <h4 class="text-center my-2">Nintendo Switch</h4>
-                    {{#if homepage}}
-                    <form class="position-absolute top-0 end-0 px-2">
-                        <button type="submit" class="btn">
-                            <span style="color:red">
-                                <i class="fa fa-times fa-2x"></i>
-                            </span>
-                        </button>
-                    </form>
-                    {{else}}
-                    {{/if}}
+<div class="col-12 col-lg-6 d-flex">
+    <div class="main-card flex-grow-1">
+        <div class="row">
+            <div class="col-12 position-relative">
+                <h4 class="text-center my-2">Nintendo Switch</h4>
+                {{!-- {{#if homepage}}
+                <form class="position-absolute top-0 end-0 px-2">
+                    <button type="submit" class="btn">
+                        <span style="color:red">
+                            <i class="fa fa-times fa-2x"></i>
+                        </span>
+                    </button>
+                </form>
+                {{else}}
+                {{/if}} --}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 d-flex align-items-center justify-content-center">
+                <span style="color:var(--charcoal)" class="icon"><i class="fa fa-gamepad fa-4x"></i></span>
+            </div>
+            <div class="col-6">
+                <h5>Description</h5>
+                <p>I will die without a new Switch! Save a kid! My mom doesn't want to buy one for me because she's
+                    an
+                    alcoholic.</p>
+                <div>
+                    <a href="#" class="shop-link">Shop link 1</a>
+                </div>
+                <div>
+                    <a href="#" class="shop-link">Shop link 2</a>
+                </div>
+                <div>
+                    <a href="#" class="shop-link">Shop link 3</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-3 d-flex align-items-center justify-content-center">
-                    <span style="color:var(--charcoal)" class="icon"><i class="fa fa-gamepad fa-4x"></i></span>
-                </div>
-                <div class="col-6">
-                    <h5>Description</h5>
-                    <p>I will die without a new Switch! Save a kid! My mom doesn't want to buy one for me because she's
-                        an
-                        alcoholic.</p>
-                    <div>
-                        <a href="#" class="shop-link">Shop link 1</a>
-                    </div>
-                    <div>
-                        <a href="#" class="shop-link">Shop link 2</a>
-                    </div>
-                    <div>
-                        <a href="#" class="shop-link">Shop link 3</a>
-                    </div>
-                </div>
-                <div class="col-3 d-flex justify-content-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <h5 class="text-center">Gotcha</h5>
-                            {{#if homepage}}
-                            <form>
-                                <div class="form-group d-flex justify-content-center">
-                                    <button type="submit" class="btn card-btn">
-                                        <span style="color:green">
-                                            <i class="fa fa-check fa-3x"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                            </form>
-                            {{else}}
-                            {{/if}}
-                        </div>
+            <div class="col-3 d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-12">
+                        {{#if homepage}}
+                        <h5 class="text-center">Delete</h5>
+                        <form>
+                            <div class="form-group d-flex justify-content-center">
+                                <button type="submit" class="btn">
+                                    <span style="color:red">
+                                        <i class="fa fa-times fa-5x"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                        {{else}}
+                        <h5 class="text-center">Gotcha</h5>
+                        <form>
+                            <div class="form-group d-flex justify-content-center">
+                                <button type="submit" class="btn">
+                                    <span style="color:green">
+                                        <i class="fa fa-check fa-5x"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                        {{/if}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{#if homepage}}
+{{else}}
+{{!-- link javascript for form --}}
+{{/if}}
