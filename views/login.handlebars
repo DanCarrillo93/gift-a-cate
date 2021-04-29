@@ -1,22 +1,24 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 mx-auto">
-      <div class="card border-dark p-3">
+      <div class="card main-card p-3">
         <h2>Log In</h2>
 
         <form class="form" id="login-form">
           <div class="form-group">
-            <label for="login-email">Email</label>
+            <h5 for="login-email" class="mt-2">Email</h5>
             <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp"
               placeholder="Enter email">
           </div>
           <div class="form-group">
-            <label for="login-password">Password</label>
+            <h5 for="login-password" class="mt-2">Password</h5>
             <input type="password" class="form-control" id="login-password" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-dark">Log In</button>
+          <button type="submit" class="btn nav-btn mx-0 mt-3">
+            <a class="nav-link text-light" href="#"><span class="btn-text">Log In</span></a>
+          </button>
           <br>
-          <a href="/signup">Don't have an account? Sign up now</a>
+          <a href="/signup" class="link-text"><span>Don't have an account? Sign up now</span></a>
         </form>
       </div>
     </div>
