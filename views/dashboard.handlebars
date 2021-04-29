@@ -1,0 +1,105 @@
+{{!-- friends list on the right with name and code and a check in one card
+a wish list showing the items
+--}}
+<div class="row main-row">
+    <div class="col-12">
+        <div class="main-card">
+            <div class="d-flex p-2 px-5 justify-content-center">
+                <h2>Dashboard!</h2>
+            </div>
+            <div class="mx-5 text-center">
+                <h3>Welcome to the Dashboard! See your friend's wishlist and make changes to your own! </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-3">
+        <div class="card main-card p-3">
+            <div class="d-flex p-2 px-5 justify-content-center">
+                <h2>Friends!</h2>
+            </div>
+
+            <form class="form" id="add-friend-form">
+                <div class="form-group">
+                    <h5 for="friend-username" class="mt-2">Username</h5>
+                    <input type="text" class="form-control" id="friend-username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <h5 for="friend-code" class="mt-2">Friend Code</h5>
+                    <input type="text" class="form-control" id="friend-code" placeholder="Friend Code">
+                </div>
+                <button type="submit" class="btn nav-btn mx-0 mt-3">
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Add Friend</span></a>
+                </button>
+            </form>
+
+            <div class="d-flex p-2 px-5 justify-content-center">
+                <h5>Friend List!</h5>
+            </div>
+            <ul class="card main-card p-3">
+                <li>
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Jerard</span></a>
+                </li>
+                <li>
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Jerard</span></a>
+                </li>
+                <li>
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Jerard</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-9">
+        <div class="card main-card p-3">
+            <div class="d-flex p-2 px-5 justify-content-center">
+                <h2>Wishlist</h2>
+            </div>
+            <form class="form" id="add-wishlist-form">
+                <div class="form-group">
+                    <h5 for="add-title" class="mt-2">Title</h5>
+                    <input type="text" class="form-control" id="add-title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <h5 for="add-wish" class="mt-2">Description</h5>
+                    <input type="text" class="form-control" id="add-wish" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <h5 for="add-link" class="mt-2">Store Links</h5>
+                    <input type="text" class="form-control" id="add-link" placeholder="Links">
+                </div>
+                <div class="form-group">
+                    <h5 for="exampleFormControlSelect1" class="mt-2">Category?</h5>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Electronics</option>
+                        <option>Beauty</option>
+                        <option>Games</option>
+                        <option>Toys</option>
+                        <option>Cars</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn nav-btn mx-0 mt-3">
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Add Wish</span></a>
+                </button>
+            </form>
+
+            <div class="d-flex p-2 px-5 justify-content-center">
+                <h5>My List!</h5>
+            </div>
+            <ul class="card main-card p-3">
+                <li>
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Jerard</span></a>
+                </li>
+                <li>
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Jerard</span></a>
+                </li>
+                <li>
+                    <a class="nav-link text-light" href="#"><span class="btn-text">Jerard</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
