@@ -17,7 +17,17 @@ User.belongsToMany(User, {
       model: Friend,
       unique: false
     },
-    as: 'followers'
+    as: "lister",
+    foreignKey: "id"
+  });
+
+  User.belongsToMany(User, {
+    through: {
+      model: Friend,
+      unique: false
+    },
+    as: "follower",
+    foreignKey: "id"
   });
 
 module.exports = { User, Items, Friend };

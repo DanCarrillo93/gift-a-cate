@@ -28,7 +28,7 @@
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
-    "prettier": "^2.1.2"
+    "prettier": "^2.2.1"
   },
   "bugs": {
     "url": "https://github.com/DanCarrillo93/gift-a-cate/issues"
