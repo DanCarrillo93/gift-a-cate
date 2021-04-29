@@ -48,6 +48,7 @@ User.init(
       // set up beforeCreate lifecycle "hook" functionality
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.friendcode = await referralCodeGenerator.custom('lowercase', 4, 6, newUserData.username);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
@@ -56,11 +57,6 @@ User.init(
           10
         );
         return updatedUserData;
-      },
-      // set up creation of the friend code
-      beforeCreate: async (newUserData) => {
-        newUserData.friendcode = await referralCodeGenerator.custom('lowercase', 4, 6, newUserData.username);
-        return newUserData;
       },
     },
     sequelize,
