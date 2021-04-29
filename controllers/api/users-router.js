@@ -4,6 +4,7 @@ const router = require("express").Router();
 
 router.post("/", async (req, res) => {
   try {
+    console.log(req.body);
     const user = await User.create(req.body);
     req.session.isLoggedIn = true;
     req.session.userId = user.id;
@@ -21,13 +22,13 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const { username, password } = req.body;
   try {
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ where: { email: req.body.email } });
+    console.log(user);
     if (!user) {
       throw new Error("User not found.");
     }
-    const isValidPassword = await user.checkPassword(password);
+    const isValidPassword = await user.checkPassword(req.body.password);
     if (!isValidPassword) {
       throw new Error("Invalid password");
     }
