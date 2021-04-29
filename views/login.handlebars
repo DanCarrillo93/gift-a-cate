@@ -1,10 +1,25 @@
-<h1>Login</h1>
-<form class="login-form">
-  <label for="username">Username</label><br>
-  <input type="text" name="username" id="username"><br>
-  <label for="password">Password</label><br>
-  <input type="password" name="password" id="password"><br>
-  <button class="btn" type="submit">Submit</button>
-</form>
-<p>Don't have an account yet? <a href="/signup">Sign Up Here</a></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card border-dark p-3">
+        <h2>Log In</h2>
+
+        <form class="form" id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="login-password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-dark">Log In</button>
+          <br>
+          <a href="/signup">Don't have an account? Sign up now</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="/js/login.js"></script>

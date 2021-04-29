@@ -25,7 +25,7 @@
         <ul class="nav justify-content-center">
           <li class="nav-item">
             <button class="btn nav-btn">
-              <a class="nav-link text-light" href="#"><span class="btn-text">Home</span></a>
+              <a class="nav-link text-light" href="/"><span class="btn-text">Home</span></a>
             </button>
           </li>
           <li class="nav-item">
@@ -33,19 +33,33 @@
               <a class="nav-link text-light" href="#"><span class="btn-text">Dashboard</span></a>
             </button>
           </li>
+          {{#if isLoggedIn}}
           <li class="nav-item">
-            <button class="btn nav-btn">
-              <a class="nav-link text-light" href="#"><span class="btn-text">Login</span></a>
+            <button class="btn nav-btn" id="logout-btn">
+              <a class="nav-link text-light" href="#"><span class="btn-text">Logout</span></a>
             </button>
           </li>
+          {{else}}
+          <li class="nav-item">
+            <button class="btn nav-btn" id="logout-btn">
+              <a class="nav-link text-light" href="/login"><span class="btn-text">Login</span></a>
+            </button>
+          </li>
+          {{/if}}
         </ul>
       </div>
     </div>
   </div>
   <div class="container-fluid">
     {{{body}}}
-    {{> card homepage=true}}
+    <div class="row">
+      {{> card homepage=true}}
+      {{> card homepage=false}}
+    </div>
   </div>
+  {{#if isLoggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

@@ -2,17 +2,18 @@
 const handleLoginSubmit = async (event) => {
   event.preventDefault();
   try {
-    const username = document.querySelector("#username").value.trim();
-    const password = document.querySelector("#password").value.trim();
 
-    if (!username || !password) {
-      alert("You must provide a username and password.");
+    const email = document.querySelector("#login-email").value.trim();
+    const password = document.querySelector("#login-password").value.trim();
+
+    if (!email || !password) {
+      alert("You must provide a email and password.");
       return;
     }
 
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
@@ -31,5 +32,5 @@ const handleLoginSubmit = async (event) => {
 };
 
 document
-  .querySelector(".login-form")
+  .querySelector("#login-form")
   .addEventListener("submit", handleLoginSubmit);
