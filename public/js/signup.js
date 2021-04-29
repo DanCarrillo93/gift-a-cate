@@ -5,7 +5,7 @@ const handleSignupSubmit = async (event) => {
     const username = document.querySelector("#signup-user").value.trim();
     const email = document.querySelector("#signup-email").value.trim();
     const password = document.querySelector("#signup-password").value.trim();
-    const friendcode = Math.floor(Math.random() * 10000000);
+    const friendcode = "";
 
     if (!username || !password || !email) {
       alert("You must provide all inputs.");
