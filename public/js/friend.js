@@ -10,7 +10,7 @@ const handleFriendSubmit = async (event) => {
       return;
     }
 
-    const response = await fetch("/api/addfriend", {
+    const response = await fetch("/api/users/addfriend", {
       method: "POST",
       body: JSON.stringify({ friendUsername, friendcode }),
       headers: {

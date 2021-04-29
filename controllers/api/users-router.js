@@ -1,4 +1,5 @@
-const { User } = require("../../models");
+const { User, Friend, Items } = require("../../models");
+const { Op } = require("sequelize");
 
 const router = require("express").Router();
 
@@ -56,6 +57,27 @@ router.get("/logout", (req, res) => {
     }
     res.end();
   });
+});
+
+router.post("/addfriend", async (req, res) => {
+  try {
+    const user = await User.findOne({ where: { friendcode: req.body.friendcode, id: {[Op.ne]: req.session.id} } });
+    console.log(user);
+    if (!user || (user.username !== req.body.friendUsername)) {
+      throw new Error("Username and friendcode did not match.");
+    }
+    const id1= user.id
+    const id2 = req.session.userId
+    // const id2 = 3
+    console.log(id1 + "-----------\n")
+    // need to actually add the friend relationship to the the friend table.
+    await Friend.create({lister: id1, follower: id2})
+    await Friend.create({lister: id2, follower: id1})
+    res.status(200).json({ message: "Friend added successfully!"})
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({ message: "Invalid username or password." });
+  }
 });
 
 module.exports = router;

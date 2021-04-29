@@ -18,7 +18,7 @@ User.belongsToMany(User, {
       unique: false
     },
     as: "lister",
-    foreignKey: "id"
+    foreignKey: "lister"
   });
 
   User.belongsToMany(User, {
@@ -27,7 +27,7 @@ User.belongsToMany(User, {
       unique: false
     },
     as: "follower",
-    foreignKey: "id"
+    foreignKey: "follower"
   });
 
 module.exports = { User, Items, Friend };
