@@ -68,7 +68,7 @@ h4 {
 
 .jumbotron {
   background-color: var(--cadetblue);
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   padding: 32px 0px;
 }
 
@@ -82,7 +82,7 @@ h4 {
 }
 
 .main-card {
-  margin: 10px 0px;
+  margin: 6px 0px;
   border: 10px solid var(--peach);
   background-color: var(--cadetblue);
 }
