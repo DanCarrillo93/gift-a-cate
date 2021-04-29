@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
+const referralCodeGenerator = require('referral-code-generator')
 
 // create our User model
 class User extends Model {
@@ -47,6 +48,7 @@ User.init(
       // set up beforeCreate lifecycle "hook" functionality
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.friendcode = await referralCodeGenerator.custom('lowercase', 4, 6, newUserData.username);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
@@ -56,11 +58,6 @@ User.init(
         );
         return updatedUserData;
       },
-      // set up creation of the friend code
-      // beforeCreate: async (newUserData) => {
-      //   newUserData.password = await bcrypt.hash(newUserData.password, 10);
-      //   return newUserData;
-      // },
     },
     sequelize,
     timestamps: false,
