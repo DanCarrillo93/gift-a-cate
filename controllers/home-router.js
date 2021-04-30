@@ -96,7 +96,8 @@ router.get("/friend/:id", withAuth, async (req, res) => {
       });
       console.log(friendGet)
       res.render("friend", {
-        friend: friendGet
+        friend: friendGet,
+        isLoggedIn: req.session.isLoggedIn
       })
     };
   } catch (error) {

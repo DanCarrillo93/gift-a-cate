@@ -6,7 +6,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3 d-flex align-items-center justify-content-center">
+            <div class="col-3 d-flex flex-column align-items-center">
+                <h5 class="text-center">{{category}}</h5>
                 {{{get_icon category}}}
             </div>
             <div class="col-6">
@@ -32,23 +33,36 @@
                 <div class="row">
                     <div class="col-12">
                         {{#if friend}}
+                        {{#if purchased}}
+                        <h5 class="text-center">Taken</h5>
+                        <form>
+                            <div class="form-group d-flex justify-content-center">
+                                <button type="submit" class="btn">
+                                    <span style="color:#565656">
+                                        <i class="far fa-clock fa-4x"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                        {{else}}
                         <h5 class="text-center">Gotcha</h5>
                         <form>
                             <div class="form-group d-flex justify-content-center">
                                 <button type="submit" class="btn">
                                     <span style="color:green">
-                                        <i class="fa fa-check fa-5x" data-id="{{item_id}}"></i>
+                                        <i class="fa fa-check fa-4x" data-id="{{item_id}}"></i>
                                     </span>
                                 </button>
                             </div>
                         </form>
+                        {{/if}}
                         {{else}}
                         <h5 class="text-center">Delete</h5>
                         <form class="delete">
                             <div class="form-group d-flex justify-content-center">
                                 <button class="btn">
                                     <span style="color:red">
-                                        <i class="fa fa-times fa-5x" data-id="{{item_id}}"></i>
+                                        <i class="fa fa-times fa-4x" data-id="{{item_id}}"></i>
                                     </span>
                                 </button>
                             </div>

@@ -16,15 +16,23 @@ module.exports = {
         break
       case "Games":
         icon = "gamepad";
-        color = "blue";
+        color = "white";
         break
       case "Toys":
         icon = "chess";
-        color = "brown";
+        color = "blue";
         break
       case "Cars":
         icon = "car";
         color = "gray";
+        break
+      case "Appliances":
+        icon = "blender";
+        color = "#565656";
+        break
+      case "Furniture":
+        icon = "couch";
+        color = "brown";
         break
       case "Other":
         icon = "gifts";
