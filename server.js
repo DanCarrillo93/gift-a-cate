@@ -30,7 +30,7 @@ sequelize
         console.error(err);
         return process.exit(1);
       }
-      console.log(`App listening on PORT ${PORT}`);
+      console.log(`App listening at http://localhost:${PORT}`);
     });
   })
   .catch((err) => {
