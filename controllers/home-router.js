@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Items, Friend } = require("../models");
+const withAuth = require("../util/withAuth")
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -18,8 +19,8 @@ router.get("/", async (req, res) => {
         raw: true,
       });
     }
-    res.render("dashboard", {
-      // res.render("home", {
+    // res.render("dashboard", {
+      res.render("home", {
       title: "Home Page",
       isLoggedIn: req.session.isLoggedIn,
       user,
@@ -36,6 +37,27 @@ router.get("/login", (req, res) => {
 
 router.get("/signup", (req, res) => {
   res.render("signup", { title: "Sign-Up Page" });
+});
+
+router.get("/dashboard", withAuth, async (req, res) => {
+  try {
+    const user = await User.findByPk(req.session.userId, {
+    exclude: ["password"],
+    include: [{
+      model: Items
+    },
+    {
+      model: User,
+      through: Friend,
+      as: "lister"
+    }
+  ]
+  })
+  const userGet = user.get({plain: true});
+  res.render("dashboard", {user: userGet});
+} catch (error) {
+  console.log(error);
+}
 });
 
 module.exports = router;
