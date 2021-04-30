@@ -16,7 +16,7 @@ a wish list showing the items
 </div>
 
 <div class="row">
-    <div class="col-3">
+    <div class="col-12 col-md-3">
         <div class="card main-card p-3">
             <div class="d-flex p-2 px-5 justify-content-center">
                 <h2>Friends!</h2>
@@ -39,7 +39,7 @@ a wish list showing the items
             <div class="d-flex p-2 px-5 justify-content-center">
                 <h5>Friend List!</h5>
             </div>
-            <ul class="card main-card p-3">
+            <ul class="card main-card p-3 friend-list">
                 {{#each user.lister as |friend|}}
                 {{> friend-list}}
                 {{/each}}
@@ -47,7 +47,7 @@ a wish list showing the items
         </div>
     </div>
 
-    <div class="col-9">
+    <div class="col-12 col-md-9">
         <div class="card main-card p-3">
             <div class="d-flex p-2 px-5 justify-content-center">
                 <h2>Wishlist</h2>
