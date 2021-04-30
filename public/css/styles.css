@@ -105,3 +105,8 @@ h4 {
 ul {
   list-style: none;
 }
+
+.friend-list-item {
+  border: 5px solid var(--peach);
+  background-color: white;
+}
