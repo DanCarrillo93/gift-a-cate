@@ -18,7 +18,7 @@ Items.init(
             references: {
               model: 'User',
               key: 'id',
-              unique: false
+              unique: false 
             }
             },
         item_name: {
@@ -32,6 +32,11 @@ Items.init(
         category:{
             type: DataTypes.STRING,
             allowNull: false
+        },
+        purchased: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
+            defaultValue: false
         },
         link_1: {
             type: DataTypes.STRING,
