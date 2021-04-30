@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Items, Friend } = require("../models");
-const withAuth = require("../util/withAuth")
+const withAuth = require("../util/withAuth");
+// const { route } = require("./api/users-router");
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -19,7 +20,6 @@ router.get("/", async (req, res) => {
         raw: true,
       });
     }
-    // res.render("dashboard", {
       res.render("home", {
       title: "Home Page",
       isLoggedIn: req.session.isLoggedIn,
@@ -54,10 +54,12 @@ router.get("/dashboard", withAuth, async (req, res) => {
   ]
   })
   const userGet = user.get({plain: true});
-  res.render("dashboard", {user: userGet});
+  res.render("dashboard", {user: userGet, isLoggedIn: req.session.isLoggedIn});
 } catch (error) {
   console.log(error);
 }
 });
+
+// route.get("/friend/:id");
 
 module.exports = router;

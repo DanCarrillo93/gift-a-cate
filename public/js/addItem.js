@@ -2,22 +2,19 @@ const handleAddItemSubmit = async (event) => {
     event.preventDefault();
     try {
         // need variable names from Oliver for the queryselectors
-      const itemName = document.querySelector("#item-name").value.trim();
+      const item_name = document.querySelector("#item-name").value.trim();
       const description = document.querySelector("#item-description").value.trim();
       const category = document.querySelector("#item-category").value.trim();
-      const link1 = document.querySelector("#item-link-1").value.trim();
-      const link2 = document.querySelector("#item-link-2").value.trim();
-      const link3 = document.querySelector("#item-link-2").value.trim();
+      const link = document.querySelector("#item-link").value.trim();
 
-
-      if (!itemName || !description || !category) {
+      if (!item_name || !description || !category) {
         alert("You must provide a item, description and a category.");
         return;
       }
   
-      const response = await fetch("/api/additem", {
+      const response = await fetch("/api/users/additem", {
         method: "POST",
-        body: JSON.stringify({ itemName, description, category, link1, link2, link3 }),
+        body: JSON.stringify({ item_name, description, category, link_1: link }),
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
         },
