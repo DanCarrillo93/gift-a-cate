@@ -15,5 +15,6 @@ const takeGift = async (event) => {
   };
 
 document
-  .querySelector('.friend-gift')
-  .addEventListener('click', takeGift);
+    .querySelectorAll('.friend-gift').forEach(item => {
+    item.addEventListener('click', takeGift);
+  });
