@@ -93,8 +93,6 @@ router.post("/additem", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
 try {
-  console.log(req.params.id);
-  console.log(req.session.userId);
   const wishListItem = await Items.destroy({
     where: {
       item_id: req.params.id,
@@ -105,9 +103,26 @@ try {
   if (!wishListItem) {
     res.status(404).json({ message: 'No item found with this id!' });
     return;
-  }
-
+  };
   res.status(200).json(wishListItem);
+} catch (error) {
+  res.status(400).json(error);
+}
+});
+
+router.put("/takegift/:id", async (req, res) => {
+try {
+  const takenItem = await Items.update({purchased:true},{
+    where: {
+      item_id: req.params.id
+    },
+  });
+
+  if (!takenItem) {
+    res.status(404).json({ message: 'No item found with this id!' });
+    return;
+  };
+  res.status(200).json(takenItem);
 } catch (error) {
   res.status(400).json(error);
 }

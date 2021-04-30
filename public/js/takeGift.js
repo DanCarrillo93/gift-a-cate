@@ -1,19 +1,19 @@
-const delButtonHandler = async (event) => {
+const takeGift = async (event) => {
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
-      const response = await fetch(`/api/users/${id}`, {
-        method: 'DELETE',
+      const response = await fetch(`/api/users/takegift/${id}`, {
+        method: 'PUT',
       });
   
       if (response.ok) {
         document.location.reload();
       } else {
-        alert('Failed to delete item');
+        alert('Failed to take item');
       }
     }
   };
 
 document
-  .querySelector('.delete')
-  .addEventListener('click', delButtonHandler);
+  .querySelector('.friend-gift')
+  .addEventListener('click', takeGift);
