@@ -106,7 +106,11 @@ ul {
   list-style: none;
 }
 
-.friend-list-item {
-  border: 5px solid var(--peach);
+.friend-list {
   background-color: white;
+}
+
+.friend-list-item {
+  background-color: var(--cadetblue);
+  border: 5px solid var(--peach);
 }
