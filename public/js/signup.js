@@ -26,7 +26,7 @@ const handleSignupSubmit = async (event) => {
     }
 
     // go to home page
-    window.location.replace("/");
+    window.location.replace("/dashboard");
   } catch (error) {
     console.log(error);
   }
